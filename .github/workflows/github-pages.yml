@@ -30,6 +30,9 @@ jobs:
         if: steps.cache-node.outputs.cache-hit != 'true'
         run: npm install
 
+      - name: Run CI pass
+        run: npm run ci
+
       - name: Build site
         run: npm run build
 
