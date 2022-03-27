@@ -58,3 +58,11 @@ This template:
 - Includes [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 - Has built-in [GitHub Actions](https://github.com/features/actions) to automatically deploy changes to the main branch to [GitHub Pages](https://pages.github.com), a static web host.
 - Has a [asdf](https://asdf-vm.com) `.tool-versions` file if you happen to like to install `node` and friends using that tool
+
+### A comment
+
+I've mucked about long enough with frontend dev tools and frameworks that this actually feels "minimal" to me. But then I look at the number of random `.foorc` and `.foo.json` files sitting around, and I've got to wonder. It really shouldn't be this hard.
+
+One thing I'd consider removing: SCSS. I like it, though.
+
+One thing I'd consider adding: Jest. Testing is a thing, I hear.
