@@ -43,6 +43,8 @@ By default, every time you push to the `main` branch, the built-in [GitHub Actio
 
 If you have a file named `CNAME` in the top-level of your `main` branch, that `CNAME` will also be used in the `gh-pages` branch. You get instant deployment of static websites!
 
+When you create a new repository on GitHub, you need to explicitly enable its GitHub Pages functionality. (You can do that by visiting the main repository page and clicking on `Settings > Pages`).
+
 ### What's in the box?
 
 This template:
