@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy-to-gh-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
