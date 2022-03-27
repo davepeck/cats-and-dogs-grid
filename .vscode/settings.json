@@ -31,7 +31,7 @@
     "editor.formatOnSave": true
   },
   "eslint.nodePath": "null",
-  "eslint.workingDirectories": ["./client"],
+  "eslint.workingDirectories": ["./src"],
   "editor.codeActionsOnSave": {
     "source.addMissingImports": true,
     "source.fixAll.eslint": true
