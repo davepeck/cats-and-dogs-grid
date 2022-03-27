@@ -1,4 +1,4 @@
-# Cats And Dogs Boilerplate
+# 🐱 And 🐶 Boilerplate
 
 Version `0.0.1` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
