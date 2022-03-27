@@ -11,7 +11,7 @@ This is a super-simple template for my daughter and I to explore modern front-en
 
 All code lives in `src/`. You'll probably want to start by editing `app.tsx` and `index.scss`.
 
-This template has built-in [GitHub Actions](https://github.com/features/actions) that automatically build and deploy any changes you make to the `main` branch directly to [GitHub Pages](https://pages.github.com).
+This template has built-in [GitHub Actions](https://github.com/features/actions) that automatically build and deploy any changes you make to the `main` branch directly to [GitHub Pages](https://pages.github.com). That means you may never need to think about deployment; it just works!
 
 ### How can I use this?
 
