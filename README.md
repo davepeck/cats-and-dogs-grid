@@ -34,7 +34,7 @@ Just use `npm run start` and visit http://localhost:1234/. It'll automatically r
 
 It's super easy!
 
-Push your code to a new repistory on GitHub, and enable [GitHub Pages]() for that repository. (You can do this by visiting the repository's main page, clicking on `Settings`, and then clicking on `Pages`.)
+Push your code to a new repistory on GitHub and enable [GitHub Pages]() for that repository. (You can do this by visiting the repository's main page, clicking on `Settings`, and then clicking on `Pages`.)
 
 Every time you push to the `main` branch after that, the [built-in](./.github/workflows/github-pages.yml) [GitHub Actions](https://github.com/features/actions) will deploy to [GitHub Pages](https://pages.github.com) by running `npm run build` and, if successful, placing the contents of the `./dist/` directory into the root of the `gh-pages` branch. 
 
