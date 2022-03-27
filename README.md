@@ -33,7 +33,9 @@ We've got built-in support for [VS Code](https://code.visualstudio.com). You'll 
 Then simply:
 
 ```
+> npm install
 > code my-project
+> npm start
 ```
 
 ### How can I deploy the code I write?
@@ -54,3 +56,4 @@ This template:
 - Contains out-of-the-box configuration for [VS Code](https://code.visualstudio.com)
 - Includes [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 - Has built-in [GitHub Actions](https://github.com/features/actions) to automatically deploy changes to the main branch to [GitHub Pages](https://pages.github.com), a static web host.
+- Has a [asdf](https://asdf-vm.com) `.tool-versions` file if you happen to like to install `node` and friends using that tool

@@ -1,0 +1,43 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Cache node assets
+        id: cache-node
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install node dependencies
+        if: steps.cache-node.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: Build site
+        run: npm build
+
+      - name: Use CNAME file if present
+        run: [ -e CNAME ] && cp CNAME dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
