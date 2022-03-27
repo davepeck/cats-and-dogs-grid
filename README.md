@@ -6,8 +6,8 @@ Version `0.0.1` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 This is a super-simple template for my daughter and I to explore modern front-end programming.
 
-- Use `npm start` to run a local dev server on http://localhost:1234/
-- Use `npm build` to generate a set of assets that can be deployed to any static web host.
+- Use `npm run start` to run a local dev server on http://localhost:1234/
+- Use `npm run build` to generate a set of assets that can be deployed to any static web host.
 
 All code lives in `src/`. You'll probably want to start by editing `app.tsx` and `index.scss`.
 
