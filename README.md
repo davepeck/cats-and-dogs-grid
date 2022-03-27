@@ -4,7 +4,7 @@ Version `0.0.1` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 ### What is this?
 
-This is a super-simple template for my daughter and I to explore modern front-end programming.
+This is a super-simple template for my daughter and I to explore modern front-end programming. It uses React and TypeScript and generates a static website.
 
 Use `npm run start` to run a local dev server on http://localhost:1234/
 
