@@ -6,7 +6,7 @@ Version `0.0.1` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 The goal for 🐱 and 🐶 is to be a simple-enough-but-no-simpler "modern" front-end boilerplate. 
 
-My daughter and I use it to explore React and TypeScript website development. Changes in the `main` branch are automatically deployed to [GitHub Pages](https://pages.github.com). It just works; hopefully, you'll never need to think about deployment.
+My daughter and I use it to explore React and TypeScript website development. Changes in the `main` branch are automatically deployed to [GitHub Pages](https://pages.github.com). It just works; you'll (almost) never need to think about deployment.
 
 Hopefully it's baked enough that you (and your kids) can mostly focus on putting code in the `src/` directory and can ignore the rest. (You'll probably want to start by editing `app.tsx` and `index.scss`.)
 
