@@ -50,9 +50,9 @@ My original goal was to include as little as possible while still supporting Rea
 
 If I were to remove something that's currently in the box, it'd probably be SCSS. (I like it, though. I considered adding [Tailwind](https://tailwindcss.com) but decided that was definitely too much for a true bare bones boilerplate.)
 
-If I were to add something that's not currently in the box, it'd probably be jest. (I hear testing is a thing, even for simple projects.)
+If I were to add something that's not currently in the box, it'd probably be [jest](https://jestjs.io). (I hear testing is a thing, even for simple projects.)
 
-If there's something in the box that I'm currently ambivilaent about, it's all the linting/formatting tools, choices, and enforcement.
+If there's something in the box that I'm currently ambivalent about, it's all the linting/formatting tools, choices, and enforcement.
 
 So... if something 🐱 feels missing to you, please submit a PR that adds it. And if something 🐶 feels extraneous to you, please submit a PR that removes it. Thanks!
 
