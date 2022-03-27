@@ -12,6 +12,8 @@ Hopefully it's baked enough that you (and your kids) can mostly focus on putting
 
 ### Getting started
 
+You'll need to install [Node 16](https://nodejs.dev). I use [asdf](https://asdf-vm.com) to do this, but there are lots of ways (`brew install node@16` works, if you're using macOS and [Homebrew](https://brew.sh)!)
+
 Use `git` to clone this repository:
 
 ```
@@ -21,8 +23,6 @@ Use `git` to clone this repository:
 > npm install
 > echo LETS DANCE CATS AND DOGS
 ```
-
-You'll need to install [Node 16](https://nodejs.dev). I use [asdf](https://asdf-vm.com) to do this, but there are lots of ways (`brew install node@16` works, if you're using macOS!)
 
 🐱 and 🐶 Boilerplate has built-in support for [VS Code](https://code.visualstudio.com). To get the most out of it, you'll want to install the four recommended extensions: [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [StyleLint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint), and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 
