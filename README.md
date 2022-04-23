@@ -1,16 +1,16 @@
 # 🐱 And 🐶 Boilerplate
 
-Version `0.0.1` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
+Version `0.0.2` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 ### What is this?
 
-The goal for 🐱 and 🐶 is to be a simple-enough-but-no-simpler "modern" front-end boilerplate. My daughter and I use it to explore React and TypeScript website development.
+The goal for 🐱 and 🐶 is to be an absurdly simple "modern" front-end boilerplate that's perfect for learning. My daughter and I use it to explore React and TypeScript website development.
 
-Changes in the `main` branch are automatically deployed to [GitHub Pages](https://pages.github.com). It just works; you'll (almost) never need to think about deployment.
+When you make changes to the `main` branch and push them to GitHub, they are _automagically_ deployed to [GitHub Pages](https://pages.github.com). It just works!
 
-Hopefully it's baked enough that you (and your kids) can mostly focus on putting code in the `src/` directory and can ignore the rest. (You'll probably want to start by editing `app.tsx` and `index.scss`.)
+Hopefully 🐱 and 🐶 baked enough that you (and your kids) can mostly focus on putting code in the `src/` directory and can ignore the rest. You'll probably want to start by editing `app.tsx` and `index.css`.
 
-### Getting started
+### Getting set up
 
 You'll need to install [Node 16](https://nodejs.dev). I use [asdf](https://asdf-vm.com) to do this, but there are lots of ways (`brew install node@16` works, if you're using macOS and [Homebrew](https://brew.sh)!)
 
@@ -24,7 +24,7 @@ Use `git` to clone this repository:
 > echo LETS DANCE CATS AND DOGS
 ```
 
-🐱 and 🐶 Boilerplate has built-in support for [VS Code](https://code.visualstudio.com). To get the most out of it, you'll want to install the four recommended extensions: [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [StyleLint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint), and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+🐱 and 🐶 Boilerplate has built-in support for [VS Code](https://code.visualstudio.com) and comes with some very basic settings suggestions (see [`.vscode/settings.json`]())
 
 ### How do I run the code I'm writing?
 

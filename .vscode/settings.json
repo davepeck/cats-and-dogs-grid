@@ -1,40 +1,12 @@
 {
-  "tslint.enable": false,
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "eslint.format.enable": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnType": false,
-  "editor.formatOnSave": false,
-  "[json]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.formatOnSave": true
-  },
-  "eslint.nodePath": "null",
-  "eslint.workingDirectories": ["./src"],
-  "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true
-  },
+  "tslint.enable": true,
+  "typescript.format.enable": true,
+  "typescript.validate.enable": true,
+  "css.format.enable": true,
+  "css.validate": true,
+  "scss.format.enable": true,
+  "scss.validate": true,
+  "html.format.enable": true,
+  "editor.formatOnSave": true,
   "typescript.tsdk": "./node_modules/typescript/lib"
 }
