@@ -61,11 +61,9 @@ So... if something 🐱 feels missing to you, please submit a PR that adds it. A
 This template:
 
 - Uses [ParcelJS 2](https://parceljs.org) for bundling
-- Uses [SCSS](https://sass-lang.com) for styles
 - Includes [React 17](https://reactjs.org)
 - Includes [TypeScript 4](https://www.typescriptlang.org)
-- Lints and formats with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
-- Contains out-of-the-box configuration for [VS Code](https://code.visualstudio.com)
+- Contains out-of-the-box configuration for [VS Code](https://code.visualstudio.com) that lints and formats on every save with VSCode's built-in rules
 - Includes [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 - Has built-in [GitHub Actions](https://github.com/features/actions) to automatically deploy changes to the main branch to [GitHub Pages](https://pages.github.com), a static web host.
 - Has a [asdf](https://asdf-vm.com) `.tool-versions` file if you happen to like to install `node` and friends using that tool
