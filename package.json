@@ -2,7 +2,7 @@
   "name": "cats-and-dogs-boilerplate",
   "description": "Cats & Dogs Boilerplate",
   "author": "Dave Peck <davepeck@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
@@ -10,33 +10,20 @@
     "npm": "^8"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "@typescript-eslint/eslint-plugin": "^5",
-    "@typescript-eslint/parser": "^5",
     "clsx": "^1",
-    "eslint": "^8",
-    "eslint-config-prettier": "^8",
-    "eslint-config-react-app": "^7",
-    "eslint-plugin-prettier": "^4",
-    "eslint-plugin-react": "^7",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.6",
     "parcel": "^2",
-    "prettier": "^2",
     "react": "^17",
     "react-dom": "^17",
-    "stylelint": "^14",
-    "stylelint-config-standard-scss": "^3",
-    "typescript": "^4"
+    "typescript": "^4",
+    "vscode-css-languageservice": "^5"
   },
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "ci": "npm run lint && npm run type-check",
+    "ci": "npm run type-check && npm run validate-css",
     "type-check": "tsc --noEmit",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --ext .ts,.tsx,.js,.jsx src",
-    "lint:css": "stylelint **/*.scss"
+    "validate-css": "node scripts/validate-css.mjs src"
   }
 }

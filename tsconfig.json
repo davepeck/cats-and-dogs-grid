@@ -6,6 +6,7 @@
     "lib": ["ESNext", "dom"],
     "strict": true,
     "strictNullChecks": true,
+    "rootDir": "./src",
     "moduleResolution": "node",
   }
 }
