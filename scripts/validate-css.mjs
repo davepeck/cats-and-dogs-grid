@@ -1,8 +1,11 @@
+// Run validation on all CSS and SCSS files that exactly matches whatever VSCode
+// does out-of-the-box on a fresh install, by explicitly calling methods
+// on VSCode's CSS Language Service.
 import fs from "fs";
 import path from "path";
 import url from "url";
 
-import { getCSSLanguageService } from "vscode-css-languageservice";
+import { getCSSLanguageService, getSCSSLanguageService } from "vscode-css-languageservice";
 import { TextDocument } from "vscode-languageserver-textdocument";
 
 /** Human-readable names for the potential diagnostic severities returned. */
@@ -28,6 +31,12 @@ const findMatchingFiles = (dir, regex) => findFiles(dir).filter((filePath) => re
 /** Recursively walk a directory, returning all *.css files. */
 const findCSSFiles = (dir) => findMatchingFiles(dir, /\.css$/);
 
+/** Recursively walk a directory, returning all *.scss files. */
+const findSCSSFiles = (dir) => findMatchingFiles(dir, /\.scss$/);
+
+/** Recursively walk a directory, returning all *.css or *.scss files. */
+const findCSSOrSCSSFiles = (dir) => findMatchingFiles(dir, /\.(css|scss)$/);
+
 /** Format a position in a given file. */
 const formatPosition = (position, filePath) =>
     `${filePath}:${position.line + 1}:${position.character + 1}`;
@@ -36,19 +45,24 @@ const formatPosition = (position, filePath) =>
 const formatDiagnostic = (diagnostic, filePath) =>
     `${formatPosition(diagnostic.range.start, filePath)} [${severities[diagnostic.severity]}] ${diagnostic.message} ${diagnostic.source}(${diagnostic.code})`;
 
-// Get the language service for CSS.
-const service = getCSSLanguageService();
+// Get the language servicees for CSS and SCSS.
+const services = {
+    "css": getCSSLanguageService(),
+    "scss": getSCSSLanguageService(),
+}
 
-// Walk through all target files, generating diagnostics for each.
-const diagnostics = findCSSFiles(process.argv[2]).flatMap(filePath => {
+// Walk through all target files, generating formatted diagnostics for each.
+const diagnostics = findCSSOrSCSSFiles(process.argv[2]).flatMap(filePath => {
     const lintUrl = url.pathToFileURL(filePath);
     const lintText = fs.readFileSync(filePath, "utf8");
-    const lintDocument = TextDocument.create(lintUrl.toString(), "css", 0, lintText);
-    const validation = service.doValidation(lintDocument, service.parseStylesheet(lintDocument));
-    return validation.map(diagnostic => formatDiagnostic(diagnostic, filePath));
+    const language = filePath.match(/\.scss$/) ? "scss" : "css";
+    const service = services[language];
+    const document = TextDocument.create(lintUrl.toString(), language, 0, lintText);
+    const validation = service.doValidation(document, service.parseStylesheet(document));
+    return validation.map((diagnostic) => formatDiagnostic(diagnostic, filePath));
 });
 
-// Print out the diagnostics, if any.
+// Print out the formatted diagnostics, if any.
 if (diagnostics.length > 0) {
     console.error(diagnostics.join("\n"));
     process.exit(1);

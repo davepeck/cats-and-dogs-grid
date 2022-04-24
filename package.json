@@ -2,7 +2,7 @@
   "name": "cats-and-dogs-boilerplate",
   "description": "Cats & Dogs Boilerplate",
   "author": "Dave Peck <davepeck@gmail.com>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
@@ -10,6 +10,7 @@
     "npm": "^8"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2",
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "clsx": "^1",

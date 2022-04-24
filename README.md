@@ -1,6 +1,6 @@
 # 🐱 And 🐶 Boilerplate
 
-Version `0.0.2` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
+Version `0.0.3` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 ### What is this?
 
@@ -8,27 +8,19 @@ Version `0.0.2` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 🐱 and 🐶 _automagically_ deploys to the real web! When you make changes to the `main` branch and push them to GitHub they are tested and, if successful, automatically deployed (see below).
 
-🐱 and 🐶 is best with a clean install of [VSCode](https://code.visualstudio.com). The rule is this: if a fresh install of VSCode flags errors in your code, it won't pass its tests, and therefore won't deploy. If a fresh install of VSCode is happy with your code, tests _will_ pass.
-
-Hopefully 🐱 and 🐶 is baked enough that you (and your kids) can mostly focus on putting code in the `src/` directory and can ignore the rest. You'll probably want to start by editing `app.tsx` and `index.css`.
+🐱 and 🐶 is best with a clean install of [VSCode](https://code.visualstudio.com). The rule is this: if a fresh install of VSCode flags errors in your code, it won't pass its tests, and therefore won't deploy. On the other hand, if a fresh install of VSCode is happy with your code, then tests _will_ pass.
 
 ### Getting set up
 
-You'll need to install [Node 16](https://nodejs.dev). I use [asdf](https://asdf-vm.com) to do this, but there are lots of ways (`brew install node@16` works, if you're using macOS and [Homebrew](https://brew.sh)!)
+You'll need to install [Node 16](https://nodejs.dev).
 
-Use `git` to clone this repository:
+There are lots of ways to do this; it depends on your own set-up.
 
-```
-> git clone --depth=1 --branch=main git@github.com:davepeck/cats-and-dogs-boilerplate my-project
-> cd my-project
-> rm -rf .git
-> npm install
-> echo LETS DANCE CATS AND DOGS
-```
+Then clone this repository, change the `CNAME` to the name of the website you want to deploy to, and get coding on `app.tsx` and `index.scss`.
 
-### How do I run the code I'm writing?
+### How do I run a development server?
 
-Just use `npm run start` and visit http://localhost:1234/. It'll automatically refresh when you change most app content.
+Use `npm run start` and visit http://localhost:1234/. It'll automatically refresh when you change most app content.
 
 ### How do I deploy the code I've written?
 
@@ -36,7 +28,7 @@ It's super easy!
 
 Push your code to a new repistory on GitHub and enable [GitHub Pages](https://pages.github.com) for that repository. (You can do this by visiting the repository's main page, clicking on `Settings`, and then clicking on `Pages`.)
 
-Every time you push to the `main` branch after that, the [built-in](./.github/workflows/github-pages.yml) [GitHub Actions](https://github.com/features/actions) will deploy to [GitHub Pages](https://pages.github.com) by running `npm run build` and, if successful, placing the contents of the `./dist/` directory into the root of the `gh-pages` branch.
+Every time you push to the `main` branch after that, the [built-in](./.github/workflows/github-pages.yml) [GitHub Actions](https://github.com/features/actions) will deploy to [GitHub Pages](https://pages.github.com) by running `npm run ci` to test, and then `npm run build`. If both are successful, the contents of the `./dist/` directory are placed into the root of the `gh-pages` branch.
 
 If you have a file named `CNAME` in the top-level of your `main` branch, that `CNAME` will also be used in the `gh-pages` branch.
 
@@ -44,11 +36,9 @@ If you have a file named `CNAME` in the top-level of your `main` branch, that `C
 
 Please do!
 
-The goal for 🐱 and 🐶 is to be a the simplest possible "modern" front-end boilerplate.
+The goal for 🐱 and 🐶 is to be the simplest possible "modern" front-end boilerplate. We want be as minimal as possible while still supporting React, TypeScript, SCSS, and instant deployment to GitHub Pages.
 
-My original goal was to include as little as possible while still supporting React, TypeScript, and instant deployment to GitHub Pages.
-
-If I were to add something that's not currently in the box, it'd probably be [jest](https://jestjs.io). (I hear testing is a thing, even for simple projects.)
+If I were to add something that's not currently in the box, it'd probably be [jest](https://jestjs.io). If I were to remove something, it might be SCSS.
 
 If something 🐱 feels missing to you, please submit a PR that adds it. And if something 🐶 feels extraneous to you, please submit a PR that removes it. Thanks!
 
