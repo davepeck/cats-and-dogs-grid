@@ -1,12 +1,9 @@
 {
-  "tslint.enable": true,
   "typescript.format.enable": true,
   "typescript.validate.enable": true,
   "css.format.enable": true,
   "css.validate": true,
-  "scss.format.enable": true,
-  "scss.validate": true,
   "html.format.enable": true,
-  "editor.formatOnSave": true,
-  "typescript.tsdk": "./node_modules/typescript/lib"
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSave": true
 }
