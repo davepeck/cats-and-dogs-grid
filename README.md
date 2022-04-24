@@ -16,7 +16,7 @@ You'll need to install [Node 16](https://nodejs.dev).
 
 There are lots of ways to do this; it depends on your own set-up.
 
-Then clone this repository, change the `CNAME` to the name of the website you want to deploy to, and get coding on `app.tsx` and `index.scss`.
+Then clone this repository, `npm install`, change the `CNAME` to the name of the website you want to deploy to, and get coding on `app.tsx` and `index.scss`.
 
 ### How do I run a development server?
 
