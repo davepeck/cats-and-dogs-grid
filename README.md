@@ -6,11 +6,11 @@ Version `0.0.2` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 🐱 and 🐶 boilerplate makes it super simple to write _and_ deploy simple React + TypeScript front-end sites. My daughter and I use it to play with "modern" web development.
 
-🐱 and 🐶 _automagically_ deploys to the real web! When you make changes to the `main` branch and push them to GitHub they are tested and, if successful, automatically deployed to [GitHub Pages](https://pages.github.com) via the magic of [GitHub Actions](https://github.com/features/actions).
+🐱 and 🐶 _automagically_ deploys to the real web! When you make changes to the `main` branch and push them to GitHub they are tested and, if successful, automatically deployed (see below).
 
-🐱 and 🐶 is best with a clean install of [VSCode](https://code.visualstudio.com). The rule is this: if a fresh install of VSCode flags errors in your code, it won't pass its tests, and therefore won't deploy.
+🐱 and 🐶 is best with a clean install of [VSCode](https://code.visualstudio.com). The rule is this: if a fresh install of VSCode flags errors in your code, it won't pass its tests, and therefore won't deploy. If a fresh install of VSCode is happy with your code, tests _will_ pass.
 
-Hopefully 🐱 and 🐶 baked enough that you (and your kids) can mostly focus on putting code in the `src/` directory and can ignore the rest. You'll probably want to start by editing `app.tsx` and `index.css`.
+Hopefully 🐱 and 🐶 is baked enough that you (and your kids) can mostly focus on putting code in the `src/` directory and can ignore the rest. You'll probably want to start by editing `app.tsx` and `index.css`.
 
 ### Getting set up
 
