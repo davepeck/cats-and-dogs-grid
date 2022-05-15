@@ -38,12 +38,12 @@ const findSCSSFiles = (dir) => findMatchingFiles(dir, /\.scss$/);
 const findCSSOrSCSSFiles = (dir) => findMatchingFiles(dir, /\.(css|scss)$/);
 
 /** Format a position in a given file. */
-const formatPosition = (position, filePath) =>
-    `${filePath}:${position.line + 1}:${position.character + 1}`;
+const formatPosition = (path, position) =>
+    `${path}:${position.line + 1}:${position.character + 1}`;
 
 /** Format a single diagnostic in a human-friendly fashion. */
-const formatDiagnostic = (diagnostic, filePath) =>
-    `${formatPosition(diagnostic.range.start, filePath)} [${severities[diagnostic.severity]}] ${diagnostic.message} ${diagnostic.source}(${diagnostic.code})`;
+const formatDiagnostic = (diagnostic) =>
+    `${formatPosition(diagnostic.path, diagnostic.range.start)} [${severities[diagnostic.severity]}] ${diagnostic.message} ${diagnostic.source}(${diagnostic.code})`;
 
 // Get the language servicees for CSS and SCSS.
 const services = {
@@ -51,19 +51,19 @@ const services = {
     "scss": getSCSSLanguageService(),
 }
 
-// Walk through all target files, generating formatted diagnostics for each.
-const diagnostics = findCSSOrSCSSFiles(process.argv[2]).flatMap(filePath => {
-    const lintUrl = url.pathToFileURL(filePath);
-    const lintText = fs.readFileSync(filePath, "utf8");
-    const language = filePath.match(/\.scss$/) ? "scss" : "css";
+// Walk through all target files, generating diagnostics for each.
+const diagnostics = findCSSOrSCSSFiles(process.argv[2]).flatMap(path => {
+    const lintUrl = url.pathToFileURL(path);
+    const lintText = fs.readFileSync(path, "utf8");
+    const language = path.match(/\.scss$/) ? "scss" : "css";
     const service = services[language];
     const document = TextDocument.create(lintUrl.toString(), language, 0, lintText);
     const validation = service.doValidation(document, service.parseStylesheet(document));
-    return validation.map((diagnostic) => formatDiagnostic(diagnostic, filePath));
+    return validation.map((diagnostic) => ({ ...diagnostic, path }));
 });
 
-// Print out the formatted diagnostics, if any.
+// Print out the diagnostics, if any.
 if (diagnostics.length > 0) {
-    console.error(diagnostics.join("\n"));
+    console.error(diagnostics.map(diagnostic => formatDiagnostic(diagnostic)).join("\n"));
     process.exit(1);
 }
