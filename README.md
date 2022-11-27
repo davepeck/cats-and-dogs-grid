@@ -1,6 +1,6 @@
 # 🐱 And 🐶 Boilerplate
 
-Version `0.0.4` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
+Version `0.0.5` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 ### What is this?
 
@@ -14,7 +14,7 @@ Version `0.0.4` by `Ellie` and Daddy aka `Dave Peck <davepeck@gmail.com>`.
 
 You'll need to install [Node 18](https://nodejs.dev).
 
-There are lots of ways to do this; it depends on your own set-up. (I have a mac with `asdf` installed, so I do `asdf install nodejs 18.12.0`, for example.)
+There are lots of ways to do this; it depends on your own set-up. (I have a mac with `asdf` installed, so I do `asdf install nodejs 18.12.1`, for example.)
 
 Then clone this repository, `npm install`, change the `CNAME` to the name of the website you want to deploy to, and get coding on `app.tsx` and `index.css`.
 
