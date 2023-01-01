@@ -1,3 +1,21 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.grid {
+  white-space: nowrap;
+}
+
+.cat {
+  background-image: url("./img/cat.png");
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+}
+
+.buttons {
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+}

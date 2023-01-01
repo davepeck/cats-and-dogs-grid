@@ -1,6 +1,6 @@
 {
-  "name": "cats-and-dogs-boilerplate",
-  "description": "Cats & Dogs Boilerplate",
+  "name": "cats-and-dogs-grid",
+  "description": "Cats & Dogs Grid",
   "author": "Dave Peck <davepeck@gmail.com>",
   "version": "0.0.5",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "parcel": "^2",
+    "process": "^0.11.10",
     "react": "^18",
     "react-dom": "^18",
     "typescript": "^4",
